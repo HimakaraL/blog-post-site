@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Site</title>
+    <style>
+        body {
+            background-color: #1c4c87;
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: #539aef; /* Highlight color for the title */
+        }
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .card {
+            background-color: #539aef;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: inline-block;
+            width: calc(33.33% - 40px); /* Adjusted for padding */
+            box-sizing: border-box;
+            text-align: left; /* Align card content to the left */
+        }
+        .card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #1c4c87; /* Highlight color for card title */
+        }
+        .card p {
+            font-size: 16px;
+        }
+        a button {
+            background-color: #1c4c87;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none; /* Remove underline from the button */
+        }
+        a button:hover {
+            background-color: #539aef; /* Change color on hover */
+        }
+
+        img {
+            height: 250px;
+            width: 1000px;
+        }
+    </style>
+</head>
+<body>
+    <img src="/bg.jpg" alt="bg">
+    <h1>Blogger By Himakara</h1>
+    <p>Share your thoughts in a Greater Way!</p>
+
+    <h2 style="color: #539aef;">Read here!</h2>
+    <% if (locals.Names && locals.Descriptions) { %>
+      <% for (let i = 0; i < Names.length; i++) { %>
+        <div class="card">
+          <h3>Post by <%= Names[i] %></h3>
+          <p><%= Descriptions[i] %></p>
+        </div>
+      <% } %>
+    <% } else { %>
+      <p>No Posts available</p>
+    <% } %>
+    <a href="/create"><button>Create a blog!</button></a>
+</body>
+</html>

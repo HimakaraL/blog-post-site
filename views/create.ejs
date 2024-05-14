@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create a Post!</title>
+    <style>
+      body {
+        background-color: #1c4c87;
+        color: white;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      form {
+        width: 300px;
+        padding: 20px;
+        background-color: #539aef;
+        border-radius: 10px;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      input[type="text"] {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border: none;
+      }
+      input[type="submit"] {
+        background-color: #1c4c87;
+        color: white;
+        padding: 5px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <form method="POST" action="/submit">
+      <h1>Create your Post</h1>
+      <label for="name">Name</label>
+      <input type="text" name="Uname" />
+      <label for="desc">Post</label>
+      <input type="text" name="Desc" />
+      <div style="text-align: center; justify-content: center">
+        <input type="submit" value="Submit" />
+      </div>
+    </form>
+  </body>
+</html>
